@@ -51,6 +51,7 @@ table {
 
 .container-style {
     border: 2px solid black;
+    /* content:25px; */
     padding: 25px;
     text-align:center;
     background-color:red;
