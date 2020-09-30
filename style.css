@@ -67,6 +67,7 @@ header p {
     padding:25px;
     background-color:black;
     color:red;
+    overflow:auto;
     
 }
 
