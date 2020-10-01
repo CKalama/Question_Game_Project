@@ -23,12 +23,13 @@ function startGame () {
     var timerInterval = setInterval(function() {
       document.getElementById("timer-counter").innerHTML="00:" + secondsLeft;
       secondsLeft--;
-      // timerEl.textContent = secondsLeft.value;
+      
   
       if(secondsLeft === 0) {
         clearInterval(timerInterval);
         
         alert("Times up! Let's see how you did");
+        timerEl.textContent = secondsLeft;
       };
     }, 1000);
   }
