@@ -33,11 +33,7 @@ var questions =
     choices: ["Los Angeles Kings", "San Jose Sharks", "Anaheim Ducks"],
     answer: 0
   },
-  {
-    question: "HARD: Patrick Sharp is quoted saying a key player got injured in Game 6 of the 2010 Stanley Cup Finals when they went to Overtime. Who?",
-    choices: ["Dustin Byfuglien", "Patrick Kane", "Jonathan Toews"],
-    answer: 2
-  },
+ 
   {
     question: "HARD: Who scored the Triple Overtime Goal in Game 2 of the Western Conference Finals 2015?",
     choices: ["Brent Seabrook", "Andrew Shaw", "Marcus Kruger"],
@@ -87,5 +83,10 @@ var questions =
     question: "HARD BONUS: Who scored the First Goal for the BlackHawks in the 2013 Stanley Cup Final?",
     choices: ["Brandon Saad", "Andrew Shaw", "Dave Bolland"],
     answer: 0
+  },
+  {
+    question: "HARD: Patrick Sharp is quoted saying a key player got injured in Game 6 of the 2010 Stanley Cup Finals when they went to Overtime. Who?",
+    choices: ["Dustin Byfuglien", "Patrick Kane", "Jonathan Toews"],
+    answer: 2
   },
 ];

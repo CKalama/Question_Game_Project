@@ -8,6 +8,9 @@ var incorrectScoreEl= document.getElementById("incorrect-score-count");
 var timerEl = document.getElementById("timer-counter");
 var submitBtn = document.getElementById("button-submit");
 var startBtn = document.getElementById("button-start");
+var choiceAEl = document.getElementById("choiceA");
+var choiceBEl = document.getElementById("choiceB");
+var choiceCEl = document.getElementById("choiceC")
 
 
 
@@ -37,13 +40,45 @@ function startGame () {
   
       //Need to push an object into each button div for each answer, and submit btn will procure right or wrong. Questions need to appear in textbox. .textContent... 
 // function getQuestion() {
-//     var questionGrab = questions[i];
+    // var questionGrab = questions[i];
 
-//     for(let i=0; i<question.length; i++) {
-//         questionBoxEl = questionGrab;
-//         btnAEl.addEventListener("onclick", questions[0]);
-//     }
-// }
+    for(let i=0; i<questions.length; i++) {
+        // questionBoxEl = questionGrab;
+        // btnAEl.addEventListener("onclick", questions[0]);
+        var storeQuestion = questions[i].question;
+        var choiceA = questions[i].choices[0];
+        // var choiceA = "hello World"
+        var choiceB = questions[i].choices[1];
+        var choiceC = questions[i].choices[2];
+        var correctChoice = questions[i].answer;
+        drawContent(storeQuestion, choiceA, choiceB, choiceC);
+        
+      }
+    function drawContent(q, A, B, C) {
+        questionBoxEl.textContent = q;
+        choiceAEl.textContent = A;
+        choiceBEl.textContent = B;
+        choiceCEl.textContent = C;
+    }
+
+    function aClick (event) {
+      // console.log(event.target.getAttribute("data-answer"));
+      var aAnswer = event.target.getAttribute("data-answer");
+    }
+    function checkAnswer(guess, correct) {
+      if (guess === correct) {
+      console.log("you got it Right!") 
+    }
+    else console.log("Sorry!");
+
+  }
+
+
+
+    btnAEl.addEventListener("click", aClick)
+
+    
+
 
 
 // Need a function to check if the User got right or wrong answer. 
@@ -56,31 +91,9 @@ function startGame () {
 
 
 
-// for ( var i = 0; i < questions.length; i++ ) {
-//     var question = questions[i].question;
-//     document.write ( question );
-//     var options = questions[i].choices;
-//     for ( var opt in options ) {
-//        for ( var radios in userChoices ) {
-//          userChoices[radios].value = options[opt];
-         
-//        }
-//     }
-    
-//   }
 
 
 //Array Starts, for loop identify the var, i=x, x++ use ===. Some if else statements to determine if User is right. 
-
-
-
-
-
-
-
-
-
-
 
 
 
