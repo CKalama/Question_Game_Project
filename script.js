@@ -67,15 +67,37 @@ function startGame () {
 
   // Linking questions array to postion of my questions
   question =questions[pos].question;
-  var choiceA = questions[i].choices[0];  
-    var choiceB = questions[i].choices[1];
-    var choiceC = questions[i].choices[2];
+  var choiceA = questions.choices;  
+    var choiceB = questions.choices;
+    var choiceC = questions.choices;
 
 
   // Displaying the question and answers, += will append so we start on an above line
   test.innerHTML = question;
 
-  test.innerHTML += "<label> <input type='radio' value='A'> "+choiceA+" </label>"
+  test.innerHTML += "<label> <input type='radio' value='A'> "+choiceA+" </label>";
+  test.innerHTML += "<label> <input type='radio' value='B'> "+choiceB+" </label>";
+  test.innerHTML += "<label> <input type='radio' value='C'> "+choiceC+" </label>";
+  test.innerHTML += "<button onclick='checkAnswer()'> Submit </button>";
+
+  //Creating the Checkanswer Function
+  function checkAnswer() {
+    choices = document.getElementsByName("choices");
+    for (var i=0; i<questions.length; i++); {
+      if (choices[i].checked) {
+        choice = choices[i].value;
+      }
+    }
+    //checking if answer matches correct choice and increments
+    if (choice == questions[pos].answer) {
+      correct++
+    }
+    pos++
+
+    questionGrab();
+  }
+
+
 
 
 
