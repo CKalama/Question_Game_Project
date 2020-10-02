@@ -11,6 +11,14 @@
 // var choiceBEl = document.getElementById("choiceB");
 // var choiceCEl = document.getElementById("choiceC")
 var startBtn = document.getElementById("button-start");
+// What question we are On
+var pos = 0;
+var correct = 0;
+var test, test_status, question, choice, choices, choiceA, choiceB, choiceC;
+
+    // var choiceA = questions[i].choices[0];  
+    // var choiceB = questions[i].choices[1];
+    // var choiceC = questions[i].choices[2];
 
 
 
@@ -36,8 +44,49 @@ function startGame () {
       };
     }, 1000);
   }
-  
-//      
+
+  //Setting up a function to grab the questions and display on HTML. 
+
+  function get(x) {
+    return document.getElementById(x);
+  }
+
+  function questionGrab() {
+    test=document.getElementById("test");
+    if (pos >= questions.length) {
+      test.innerHTML = "You have " + correct + "out of " + questions.length + "questions correct."
+      document.getElementById("test-status").innerHTML = "You finished! You must love Coach Q and Johnny as much as I do!"
+    //reset questions to restart
+    pos =0;
+    correct = 0;
+    
+    //Learned this, return false will stop the function from running when the test is over. 
+    return false;
+    }
+  }
+
+  // Linking questions array to postion of my questions
+  question =questions[pos].question;
+  var choiceA = questions[i].choices[0];  
+    var choiceB = questions[i].choices[1];
+    var choiceC = questions[i].choices[2];
+
+
+  // Displaying the question and answers, += will append so we start on an above line
+  test.innerHTML = question;
+
+  test.innerHTML += "<label> <input type='radio' value='A'> "+choiceA+" </label>"
+
+
+
+
+
+
+
+
+
+
+  //      
   
       //Need to push an object into each button div for each answer, and submit btn will procure right or wrong. Questions need to appear in textbox. .textContent... 
 // function getQuestion() {
