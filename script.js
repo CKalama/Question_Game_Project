@@ -29,7 +29,7 @@ test.innerHTML="Welcome!";
 
 // console.log("hello")
 
-var secondsLeft = 15;
+var secondsLeft = 75;
 
 //What I want to see on the page when it first loads. 
 
@@ -53,7 +53,7 @@ function startGame () {
     }, 1000);
   }
   function displayScore() {
-     test.innerHTML = "You have " + correct + "out of " + questions.length + "questions correct."
+     test.innerHTML = "You got " + correct + " out of " + questions.length + " questions correct."
   }
 
   //Setting up a function to grab the questions and display on HTML. 
@@ -99,19 +99,9 @@ function startGame () {
     choices = document.getElementsByName("choices");
     // console.log("choices", choices);
     // console.log(choices.length);
-    // function isCorrect(ch) {
-    //   if (ch.checked) {
-    //     choice = ch.value;
-    //   }
-    // }
-    // choices.forEach(isCorrect);
+    
 
-    // choices.forEach(ch => {
-    //   console.log(ch);
-      // if (ch.checked) {
-      //   choice = ch.value;
-      //}
-    // });
+  
 
 
 
@@ -122,6 +112,22 @@ function startGame () {
         choice = choices[i].value;
       }
     }
+    //A way of doing the for loop above with es6 fat arrow
+  // choices.forEach(ch => {
+    //   console.log(ch);
+      // if (ch.checked) {
+      //   choice = ch.value;
+      //}
+    // });
+
+    //A way of doing above again with an array Method
+    // function isCorrect(ch) {
+    //   if (ch.checked) {
+    //     choice = ch.value;
+    //   }
+    // }
+    // choices.forEach(isCorrect);
+
     console.log("user choice", choice);
     // checking if answer matches correct choice and increments
     if (choice == questions[position].answer) {
