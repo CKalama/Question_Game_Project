@@ -85,8 +85,8 @@ var questions =
     answer: 0
   },
   {
-    question: "HARD: Patrick Sharp is quoted saying a key player got injured in Game 6 of the 2010 Stanley Cup Finals when they went to Overtime. Who?",
-    choices: ["Dustin Byfuglien", "Patrick Kane", "Jonathan Toews"],
+    question: "HARD: Patrick Sharp is quoted saying a key player got injured in Game 6 of the 2010 Stanley Cup Finals, likely not going to play in Game 7 if necessary had Patrick Kane had not scored. Who was it?",
+    choices: ["Dustin Byfuglien", "Duncan Keith", "Jonathan Toews"],
     answer: 2
   },
 ];
