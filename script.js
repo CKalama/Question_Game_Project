@@ -44,7 +44,7 @@ function startGame () {
       secondsLeft--;
       
   
-      if(secondsLeft === 0) {
+      if(secondsLeft === 0 || secondsLeft<0) {
         clearInterval(timerInterval);
         
         displayScore();
