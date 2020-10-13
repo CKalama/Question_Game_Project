@@ -3,6 +3,8 @@ Press Start and see how much you know about the Chicago Blackhawks!
 
 Deployed Link: https://ckalama.github.io/Question_Game_Project/
 
+Programming Tools: HTML, CSS, JS
+
 Description: 
   This questionairre was designed to test the knowledge of the Chicago Blackhawks. It was specifically catered for "diehard" fans, requiring knowledge of advanced hockey statistics pertaining to the Blackhawks. The user simply presses "start" in the center-right of the browser and will be given 75 seconds to answer 17 questions. Careful, if you get a question wrong you will be docked 5 seconds of Gametime. Requiring you to answer the questions in a shorter time span. I built this project to highlight beginning Javascript logic knowledge and to ensure I could understand more advanced components such as building out proper functions with for Loops and Conditionals. 
   
